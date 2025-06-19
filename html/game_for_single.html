@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="../css/style.css">
+
+<div id="parent">
+    <div id="container">
+        <h1 id="lable">Tic-Tec-Toe Game</h1>
+        <h1 id="statusText"></h1><!--the satus text will be writen in the javascript-->
+        <div id="gbox">
+            <button btnindex="0" class="btn"> </button>
+            <button btnindex="1" class="btn"> </button>
+            <button btnindex="2" class="btn"> </button>
+            <button btnindex="3" class="btn"> </button>
+            <button btnindex="4" class="btn"> </button>
+            <button btnindex="5" class="btn"> </button>
+            <button btnindex="6" class="btn"> </button>
+            <button btnindex="7" class="btn"> </button>
+            <button btnindex="8" class="btn"> </button>
+        </div>
+        <div>
+            <button id="reset" class="nbtn">Reset Game</button>
+        </div>
+    </div>
+</div>
+<script>
+    function defult_session() {
+        if (sessionStorage.getItem("difficulty") === null) {
+            sessionStorage.setItem("difficulty", "medium");
+        }
+
+        if (sessionStorage.getItem("playfirst") === null) {
+            sessionStorage.setItem("playfirst", "no");
+        }
+        if (sessionStorage.getItem("PlayAs") === null) {
+            sessionStorage.setItem("PlayAs", "x");
+        }
+    };
+
+    defult_session();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../javascript/single_player_logic.js"></script>

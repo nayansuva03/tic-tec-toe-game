@@ -1,0 +1,398 @@
+/* General Body and Font Styling */
+body {
+    background-color: #1a1a2e;
+    /* Dark background */
+    color: #e0e0e0;
+    /* Light text */
+    font-family: 'Inter', sans-serif;
+    /* Modern font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+    /* Allow scrolling if content overflows */
+}
+
+/* Container Styling for all pages */
+#game-containor,
+#Single-page,
+#Multi-page,
+#parent {
+    background-color: #16213e;
+    /* Slightly lighter dark background for containers */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    /* Stronger shadow for depth */
+    padding: 40px;
+    text-align: center;
+    max-width: 90%;
+    /* Responsive width */
+    width: 500px;
+    /* Max width for larger screens */
+    margin: auto;
+    /* Center the container */
+    animation: fadeIn 0.8s ease-out;
+    /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Headings */
+h1,
+h2 {
+    color: #e94560;
+    /* Accent color for headings */
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #b0b0b0;
+}
+
+/* Button Styling (General) */
+button {
+    background-color: #0f3460;
+    /* Dark blue button */
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+button:hover {
+    background-color: #1a5276;
+    /* Lighter blue on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific Button Styling for index.html */
+#game-containor>div>button {
+    width: 200px;
+    font-weight: bold;
+}
+
+/* options.html specific styles */
+.options-group {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #212a4e;
+    /* Slightly different dark shade for option groups */
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.option-item {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    color: #c0c0c0;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #2c3a5e;
+    color: #e0e0e0;
+    border: 1px solid #0f3460;
+    font-size: 1em;
+    appearance: none;
+    /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23e0e0e0%22%20d%3D%22M287%2C197.4L159.2%2C69.7c-3.2-3.2-8.3-3.2-11.6%2C0L5.4%2C197.4c-3.2%2C3.2-3.2%2C8.3%2C0%2C11.6l11.6%2C11.6c3.2%2C3.2%2C8.3%2C3.2%2C11.6%2C0l120.7-120.7l120.7%2C120.7c3.2%2C3.2%2C8.3%2C3.2%2C11.6%2C0l11.6-11.6C290.2%2C205.7%2C290.2%2C200.6%2C287%2C197.4z%22%2F%3E%3C%2Fsvg%3E');
+    /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%;
+    background-size: 0.65em auto;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #e94560;
+    box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.5);
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+    /* Slightly larger radio buttons */
+    accent-color: #e94560;
+    /* Accent color for radio buttons */
+}
+
+input[type="submit"]#SUBMIT {
+    background-color: #e94560;
+    /* Accent color for submit button */
+    padding: 15px 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(233, 69, 96, 0.4);
+}
+
+input[type="submit"]#SUBMIT:hover {
+    background-color: #ff6b8a;
+    /* Lighter accent on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(233, 69, 96, 0.6);
+}
+
+/* Toggle Switch (PlayFirst) */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    /* Off state background */
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #e94560;
+    /* On state background */
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #e94560;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+/* game.html specific styles */
+#container {
+    padding: 30px;
+}
+
+#statusText {
+    font-size: 1.8em;
+    color: #66fcf1;
+    /* A different accent color for status text */
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+#gbox {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.btn {
+    width: 100px;
+    height: 100px;
+    background-color: #2c3a5e;
+    /* Darker cell background */
+    border: 2px solid #0f3460;
+    font-size: 3em;
+    font-weight: bold;
+    color: #66fcf1;
+    /* Text color for X/O */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #3e4d72;
+    /* Lighter cell on hover */
+    transform: scale(1.02);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+#reset.nbtn {
+    background-color: #e94560;
+    /* Same accent color as submit button */
+    padding: 12px 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(233, 69, 96, 0.3);
+}
+
+#reset.nbtn:hover {
+    background-color: #ff6b8a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(233, 69, 96, 0.5);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    #game-containor,
+    #Single-page,
+    #Multi-page,
+    #parent {
+        padding: 25px;
+        width: 95%;
+        /* More width on smaller screens */
+    }
+
+    #gbox {
+        grid-template-columns: repeat(3, 80px);
+        /* Smaller cells */
+        grid-template-rows: repeat(3, 80px);
+        gap: 8px;
+    }
+
+    .btn {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5em;
+    }
+
+    input[type="submit"]#SUBMIT {
+        padding: 12px 30px;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    #game-containor>div>button {
+        width: 150px;
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    #gbox {
+        grid-template-columns: repeat(3, 70px);
+        /* Even smaller cells */
+        grid-template-rows: repeat(3, 70px);
+        gap: 5px;
+    }
+
+    .btn {
+        width: 70px;
+        height: 70px;
+        font-size: 2em;
+    }
+
+    .switch {
+        width: 50px;
+        height: 28px;
+    }
+
+    .slider:before {
+        height: 20px;
+        width: 20px;
+        left: 3px;
+        bottom: 4px;
+    }
+
+    input:checked+.slider:before {
+        transform: translateX(22px);
+    }
+}
+
+.winning-cell {
+    background-color: #28a745 !important;
+    /* Green background for winning cells */
+    color: white !important;
+    animation: blink 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes blink {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}

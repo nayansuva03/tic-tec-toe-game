@@ -1,0 +1,46 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<link rel="stylesheet" href="../css/style.css">
+<script src="../javascript/switch.js"></script>
+
+<div id="Single-page">
+    <div id="Difficulty">
+        <lable for="difficulty">Difficulty</lable>
+        <select name="difficulty" id="difficulty" onchange="sessionStorage.setItem(this.id, this.value)">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+        </select>
+    </div>
+
+    <div id="chouse_sine">
+        <h1 id="PayFirst">PlayFirst</h1>
+        <label class="switch">
+            <input type="checkbox" id="yes" name="yes"
+                onchange="sessionStorage.setItem('playfirst', this.checked ? 'yes' : 'no')">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <div id="PlayAs">
+        <h1>Play as...</h1>
+        <label for="option1">X :</label>
+        <input type="radio" id="option1" name="PlayAs" value="x" checked
+            onclick="sessionStorage.setItem('PlayAs', 'x')">
+        <label for="option2">O:</label>
+        <input type="radio" id="option2" name="PlayAs" value="o" onclick="sessionStorage.setItem('PlayAs', 'o')">
+    </div>
+
+    <div id="Submit-btn">
+        <input type="submit" id="SUBMIT">
+    </div>
+</div>
+
+
+<div id="Multi-page">
+    <div>
+        <h1 id="PayFirst">chose who will play first</h1>
+        <button id="First_x" onclick="sessionStorage.setItem('First_Player', 'x')">X</button>
+        <button id="First_o" onclick="sessionStorage.setItem('First_Player', 'o')">O</button>
+    </div>
+</div>
