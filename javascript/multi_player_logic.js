@@ -51,28 +51,23 @@ $(document).ready(function () {
 
     function checkResults() {
         for (let i = 0; i < wincondition.length; i++) {
-            const conditions = wincondition[i];
-            const a = conditions[0];
-            const b = conditions[1];
-            const c = conditions[2];
-
-            const cellA = board[a];
-            const cellB = board[b];
-            const cellC = board[c];
-
-            if (cellA && cellA === cellB && cellB === cellC) {
-                StatusText.innerText = `${cellA} won!`;
-
-                // ✅ Highlight winning cells
+            const [a, b, c] = wincondition[i];
+            if (board[a] !== '' && board[a] === board[b] && board[b] === board[c]) {
+                StatusText.innerText = `${board[a]} won!`;
                 btn[a].classList.add("winning-cell");
                 btn[b].classList.add("winning-cell");
                 btn[c].classList.add("winning-cell");
-
                 stopgame();
                 return;
             }
+            if (!board.includes('')) {
+                StatusText.innerText = `It's a draw!`;
+                stopgame();
+            }
+
         }
     }
+
 
 
     function stopgame() {
